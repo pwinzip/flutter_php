@@ -179,7 +179,7 @@ class _SignupPageState extends State<SignupPage> {
       'user': user,
       'pass': pass,
     });
-    var url = 'http://127.0.0.1/flutter_php/register.php?data=' + strdata;
+    var url = 'http://127.0.0.1/api/register.php?data=' + strdata;
     var result = await http.get(url);
 
     if (jsonDecode(result.body) == '1') {
